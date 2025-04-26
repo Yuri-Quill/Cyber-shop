@@ -23,7 +23,7 @@
 	}
 
 	&__title {
-		color: #ffffff;
+		color: $text-white;
 		opacity: 0.85;
 		font-size: clamp(2.5rem, 2.141rem + 2.299vw, 3.75rem);
 		font-weight: 200;
@@ -41,7 +41,7 @@
 
 	&__message {
 		font-size: 1.25rem;
-		color: #ffffff;
+		color: $text-white;
 		opacity: 0.9;
 		line-height: 1.5;
 		margin: 0;
@@ -53,7 +53,7 @@
 		background: rgba(249, 11, 114, 0.2);
 		border: 1px solid rgba(249, 11, 114, 0.5);
 		border-radius: 12px;
-		color: #ffffff;
+		color: $text-white;
 		font-size: 1rem;
 		font-weight: 500;
 		text-decoration: none;
