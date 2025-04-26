@@ -1,11 +1,5 @@
-import Loader from "../../Components/Container/Loader/Loader";
 const Home = () => {
-	return (
-		<>
-			Home
-			<Loader fullscreen size="lg"/>
-		</>
-	);
+	return <>Home</>;
 };
 
 export default Home;

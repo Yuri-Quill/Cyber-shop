@@ -1,10 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import { lazy } from "react";
 
 import MainLayout from "./Layouts/MainLayout";
-
-const ErrorPage = lazy(() => import("./pages/Error/Error"));
-const HomePage = lazy(() => import("./pages/Home/Home"));
+import Home from "./pages/Home/Home";
+import ErrorPage from "./pages/Error/Error";
 
 const router = createBrowserRouter([
 	{
@@ -14,7 +12,7 @@ const router = createBrowserRouter([
 		children: [
 			{
 				index: true,
-				element: <HomePage />,
+				element: <Home />,
 			},
 		],
 	},
