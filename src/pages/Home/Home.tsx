@@ -1,12 +1,11 @@
-import Loader from "../../Components/Container/Loader/Loader"
+import Loader from "../../Components/Container/Loader/Loader";
 const Home = () => {
-    return (
-        <>
-        Home
-<Loader mode="full-screen"/>
-        </>
-    )
-}
+	return (
+		<>
+			Home
+			<Loader fullscreen size="lg"/>
+		</>
+	);
+};
 
-
-export default Home
+export default Home;

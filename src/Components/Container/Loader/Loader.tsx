@@ -1,20 +1,34 @@
+import React from "react";
 import classNames from "classnames";
 import "./Loader.scss";
 
-const Loader = ({ mode = "main" }) => {
-	return (
-		<div
-			className={classNames("loader", {
-				"loader--full-screen": mode === "full-screen",
-				"loader--main": mode === "main",
-			})}
-		>
-			<div className="loader__spinner">
-				<div className="loader__spinner--outer" />
-				<div className="loader__spinner--inner" />
-			</div>
+type LoaderProps = {
+	fullscreen?: boolean;
+	size?: "sm" | "md" | "lg";
+	glass?: boolean;
+	className?: string;
+};
+
+function Loader({ fullscreen = false, size = "md", glass = true, className }: LoaderProps) {
+	const spinnerClass = classNames("loader__spinner", `loader__spinner--${size}`, className);
+
+	const backdropClass = classNames("loader__backdrop", {
+		glass,
+	});
+
+	const innerClass = classNames("loader__spinner__inner", `loader__spinner--${size}`);
+
+	const spinner = (
+		<div className={spinnerClass}>
+			<div className={innerClass} />
 		</div>
 	);
-};
+
+	if (fullscreen) {
+		return <div className={backdropClass}>{spinner}</div>;
+	}
+
+	return spinner;
+}
 
 export default Loader;
