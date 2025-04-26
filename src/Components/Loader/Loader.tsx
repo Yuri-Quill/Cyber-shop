@@ -1,5 +1,5 @@
 import "./Loader.scss";
-import cn from "classnames";
+import clsx from "clsx";
 
 type LoaderProps = {
 	fullscreen?: boolean;
@@ -7,7 +7,7 @@ type LoaderProps = {
 };
 
 function Loader({ fullscreen = false, size }: LoaderProps) {
-	const loaderClassName = cn("loader", {
+	const loaderClassName = clsx("loader", {
 		"loader--sm": size === "sm",
 		"loader--lg": size === "lg",
 	});

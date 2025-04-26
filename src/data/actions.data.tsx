@@ -1,4 +1,4 @@
-import { CgProfile, CgShoppingCart } from "react-icons/cg";
+import { HiOutlineShoppingCart, HiOutlineHeart } from "react-icons/hi2";
 
 import { IActionsData } from "@/types/actions.types";
 
@@ -6,7 +6,7 @@ export const actionsData: IActionsData[] = [
 	{
 		id: 1,
 		name: "Favorites",
-		image: <CgProfile />,
+		image: HiOutlineHeart,
 		description: "View your favorite products",
 		link: "/favorites",
 		ariaLabel: "Go to favorites page",
@@ -14,7 +14,7 @@ export const actionsData: IActionsData[] = [
 	{
 		id: 2,
 		name: "Cart",
-		image: <CgShoppingCart />,
+		image: HiOutlineShoppingCart,
 		description: "View your cart",
 		link: "/cart",
 		ariaLabel: "Go to cart page",
