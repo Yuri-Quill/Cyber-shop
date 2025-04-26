@@ -1,54 +1,50 @@
-# React + TypeScript + Vite
+# Cyber Electronics Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern e-commerce platform built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Modern React development with TypeScript
+- Fast development and build with Vite
+- State management with Redux Toolkit
+- Form handling with Formik and Yup validation
+- Routing with React Router DOM
+- SCSS styling with advanced features
+- Fuzzy search functionality
+- Toast notifications
+- Type-safe development environment
 
-## Expanding the ESLint configuration
+## 🛠️ Technologies
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Core Dependencies
+- React v19.1.0
+- TypeScript v5.7.3
+- Redux Toolkit v2.6.1
+- React Redux v9.2.0
+- React Router DOM v7.5.0
+- Axios v1.8.4
+- Formik v2.4.6
+- Yup v1.6.1
+- Fuse.js v7.1.0
+- React Icons v5.5.0
+- React Toastify v11.0.5
+- SASS v1.86.3
+- Classnames v2.5.1
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Development Dependencies
+- Vite v6.2.6
+- @vitejs/plugin-react v4.3.4
+- ESLint v9.24.0
+- TypeScript ESLint v8.29.1
+- PostCSS v8.5.3
+- Autoprefixer v10.4.21
+- Vite Plugin Mkcert v1.17.8
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚦 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Clone the repository**
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. **Install dependencies**
+```bash
+npm install
 ```
