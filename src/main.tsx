@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 
 import './helpers/reset.scss'
 
+import 'react-toastify/dist/ReactToastify.css'
 import './fonts/fonts.scss'
 import './index.scss'
 
