@@ -37,12 +37,13 @@ $border-extra-light: #EBEBEB;
 
 // * Shadows
 
-$shadow-card: 0 2px 4px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.08);
-$shadow-card-hover: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.12);
-$shadow-button: 0 2px 4px rgba(0, 0, 0, 0.05);
-$shadow-button-active: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+$box-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1); // Легкая тень для карточек
+$box-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15); // Средняя тень для попапов
+$box-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2); // Глубокая тень для акцентных элементов
 
 // * Different colors
 
-$error-color: #AA1803;
 $color-light-blue: #00c9ff;
+$success-color: #00C853; 
+$warning-color: #FFCA28;
+$error-color: #D32F2F; 

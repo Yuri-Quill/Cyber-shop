@@ -1,33 +1,24 @@
-import classNames from "classnames";
 import "./Loader.scss";
+import cn from "classnames";
 
 type LoaderProps = {
 	fullscreen?: boolean;
-	size?: "sm" | "md" | "lg";
-	glass?: boolean;
-	className?: string;
+	size?: "sm" | "lg";
 };
 
-function Loader({ fullscreen = false, size = "md", glass = true, className }: LoaderProps) {
-	const spinnerClass = classNames("loader__spinner", `loader__spinner--${size}`, className);
-
-	const backdropClass = classNames("loader__backdrop", {
-		glass,
+function Loader({ fullscreen = false, size }: LoaderProps) {
+	const loaderClassName = cn("loader", {
+		"loader--sm": size === "sm",
+		"loader--lg": size === "lg",
 	});
 
-	const innerClass = classNames("loader__spinner__inner", `loader__spinner--${size}`);
-
-	const spinner = (
-		<div className={spinnerClass}>
-			<div className={innerClass} />
+	return fullscreen ? (
+		<div className="loader-wrapper fullscreen">
+			<div className={loaderClassName} />
 		</div>
+	) : (
+		<div className={loaderClassName} />
 	);
-
-	if (fullscreen) {
-		return <div className={backdropClass}>{spinner}</div>;
-	}
-
-	return spinner;
 }
 
 export default Loader;

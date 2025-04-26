@@ -7,7 +7,7 @@ const MainLayout = () => {
 		<div className="wrapper">
 			<header className="header">header</header>
 			<main className="main">
-				<Suspense fallback={<Loader fullscreen size="lg" />}>
+				<Suspense fallback={<Loader fullscreen={true} />}>
 					<Outlet />
 				</Suspense>
 			</main>
